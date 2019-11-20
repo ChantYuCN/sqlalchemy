@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 Base = automap_base()
 
 # engine, suppose it has two tables 'user' and 'address' set up
-engine = create_engine("mysql+pymysql://root@172.16.206.38:3306/test1to1")
+engine = create_engine("mysql+pymysql://root@localhost:3306/test1to1")
 
 # reflect the tables
 Base.prepare(engine, reflect=True)
