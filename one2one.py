@@ -19,7 +19,7 @@ class Child(Base):
     parent_id = Column(Integer, ForeignKey('parent.id'))
     parent = relationship("Parent", back_populates="child")
 
-engine = create_engine('mysql+pymysql://root@localhost:3306/test1to1')
+engine = create_engine('mysql+pymysql://root@172.16.206.38:3306/test1to1')
 session = sessionmaker()
 session.configure(bind=engine)
 Base.metadata.create_all(engine)
