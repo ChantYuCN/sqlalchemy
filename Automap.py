@@ -20,6 +20,7 @@ session = Session(engine)
 # rudimentary relationships are produced
 session.add(Child(name="annyu", parent=Parent(name="fatw")))
 session.commit()
+instance1 = session.query(Parent).filter(Parent.name == 'hyyu').one()
 
 # collection-based relationships are by default named
 # "<classname>_collection"
